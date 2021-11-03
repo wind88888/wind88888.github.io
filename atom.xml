@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>向阳风</title>
   
+  <subtitle>你若安好，便是晴天</subtitle>
+  <link href="https://wind88888.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/atom.xml" rel="self"/>
-  
-  <link href="http://example.com/"/>
+  <link href="https://wind88888.github.io/"/>
   <updated>2021-11-01T11:08:59.768Z</updated>
-  <id>http://example.com/</id>
+  <id>https://wind88888.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>John 向阳风</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>就立刻三个人分类</title>
-    <link href="http://example.com/2021/11/01/jiu-li-ke-san-ge-ren-fen-lei/"/>
-    <id>http://example.com/2021/11/01/jiu-li-ke-san-ge-ren-fen-lei/</id>
+    <link href="https://wind88888.github.io/2021/11/01/jiu-li-ke-san-ge-ren-fen-lei/"/>
+    <id>https://wind88888.github.io/2021/11/01/jiu-li-ke-san-ge-ren-fen-lei/</id>
     <published>2021-11-01T11:08:59.000Z</published>
     <updated>2021-11-01T11:08:59.768Z</updated>
     
@@ -31,8 +31,8 @@
   
   <entry>
     <title>my-first-blog</title>
-    <link href="http://example.com/2021/11/01/my-first-blog/"/>
-    <id>http://example.com/2021/11/01/my-first-blog/</id>
+    <link href="https://wind88888.github.io/2021/11/01/my-first-blog/"/>
+    <id>https://wind88888.github.io/2021/11/01/my-first-blog/</id>
     <published>2021-11-01T11:05:48.000Z</published>
     <updated>2021-11-01T11:33:48.506Z</updated>
     
@@ -53,8 +53,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2021/11/01/hello-world/"/>
-    <id>http://example.com/2021/11/01/hello-world/</id>
+    <link href="https://wind88888.github.io/2021/11/01/hello-world/"/>
+    <id>https://wind88888.github.io/2021/11/01/hello-world/</id>
     <published>2021-11-01T04:34:19.713Z</published>
     <updated>1985-10-26T08:15:00.000Z</updated>
     
