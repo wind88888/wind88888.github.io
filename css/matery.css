@@ -241,7 +241,7 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, #FFF338 0%, #0CECDD 100%);/*蓝黄渐变*/
 }
 
 .text-color {
@@ -253,11 +253,11 @@ mark {
 }
 
 .progress-bar {
-    height: 4px;
+    height: 6px;
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background: linear-gradient(to right, #FFF338 0%, #0CECDD 100%);
     opacity: 0.8;
 }
 
@@ -550,10 +550,10 @@ header .go-back i {
     height: 40vh !important;
 }
 
-.bg-cover:after {
+/*.bg-cover:after {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
-}
+}*/
 
 .bg-cover:before,
 .bg-cover:after {
@@ -565,6 +565,8 @@ header .go-back i {
     left: 0;
     top: 0;
     content: "";
+    /* backdrop-filter: blur(0.1vw);
+    background: rgba(0, 0, 0, 0.1);*/
 }
 
 .bg-cover .container {
@@ -1839,11 +1841,11 @@ footer .social-statis {
 }
 
 footer a {
-    color: #fff;
+    color: #000;
 }
 
 footer .copy-right {
-    color: #dbdbdb;
+    color: rgb(34, 34, 34);
 }
 
 /*搜索层样式*/

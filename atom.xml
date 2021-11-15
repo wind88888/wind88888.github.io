@@ -6,7 +6,7 @@
   <link href="https://wind88888.github.io/atom.xml" rel="self"/>
   
   <link href="https://wind88888.github.io/"/>
-  <updated>2021-11-01T11:08:59.768Z</updated>
+  <updated>2021-11-15T08:27:59.475Z</updated>
   <id>https://wind88888.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ubuntu-vpn</title>
+    <link href="https://wind88888.github.io/2021/11/15/ubuntu-vpn/"/>
+    <id>https://wind88888.github.io/2021/11/15/ubuntu-vpn/</id>
+    <published>2021-11-15T07:49:04.000Z</published>
+    <updated>2021-11-15T08:27:59.475Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-普通用户切换root用户&quot;&gt;&lt;a href=&quot;#1-普通用户切换root用户&quot; class=&quot;headerlink&quot; title=&quot;1.普通用户切换root用户&quot;&gt;&lt;/a&gt;1.普通用户切换root用户&lt;/h3&gt;&lt;h4</summary>
+        
+      
+    
+    
+    
+    
+    <category term="ubuntu" scheme="https://wind88888.github.io/tags/ubuntu/"/>
+    
+  </entry>
   
   <entry>
     <title>就立刻三个人分类</title>
@@ -30,24 +53,26 @@
   </entry>
   
   <entry>
-    <title>my-first-blog</title>
-    <link href="https://wind88888.github.io/2021/11/01/my-first-blog/"/>
-    <id>https://wind88888.github.io/2021/11/01/my-first-blog/</id>
+    <title>Git-Guide</title>
+    <link href="https://wind88888.github.io/2021/11/01/git-guide/"/>
+    <id>https://wind88888.github.io/2021/11/01/git-guide/</id>
     <published>2021-11-01T11:05:48.000Z</published>
-    <updated>2021-11-01T11:33:48.506Z</updated>
+    <updated>2021-11-11T06:58:21.396Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;c’dremote入门 本地改动后pull不了远端，需要先git checkout -f [当前分支]丢弃所有，再git pull origin [当前分支]:&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;github-emoji&quot;&gt;&lt;span&gt;😄&lt;/span&gt;&lt;img</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;/2021/11/01/git-guide/Git&amp;amp;GitHub-1600161213521.png&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Git-amp-GitHub&quot;&gt;&lt;a href=&quot;#Git-amp-GitHub&quot;</summary>
         
       
     
     
     
+    
+    <category term="GIT" scheme="https://wind88888.github.io/tags/GIT/"/>
     
   </entry>
   
