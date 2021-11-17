@@ -411,21 +411,21 @@ git config --global user.email &#34;1078***992">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-11
+                    2021-11-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.9k
+                    5.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    18 分
+                    19 分
                 </div>
                 
 
@@ -506,12 +506,27 @@ setttings-<span class="token operator">&gt;</span>SSHandGPGkeys-<span class="tok
 //创建分支: 
 <span class="token function">git</span> branch <span class="token punctuation">[</span>分支名<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+
+
+<p>本地创建远程的新分支并push上去：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> checkout -b my-test  //在当前分支下创建my-test的本地分支分支
+<span class="token function">git</span> push origin my-test  //将my-test分支推送到远程
+<span class="token function">git</span> branch --set-upstream-to<span class="token operator">=</span>origin/my-test //将本地分支my-test关联到远程分支my-test上   
+<span class="token function">git</span> branch -a //查看远程分支 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>此时远程分支my-test已经创建好了，并且本地的分支已经关联到远程分支上<br>本地push代码以后会push到关联的远程分支上。</p>
 <h3 id="3-提交"><a href="#3-提交" class="headerlink" title="3.提交"></a>3.提交</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> status
 <span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
 <span class="token function">git</span> checkout <span class="token punctuation">[</span>要push的分支名<span class="token punctuation">]</span>
 <span class="token function">git</span> commit -m <span class="token string">"本次提交注释"</span>
 <span class="token function">git</span> push <span class="token punctuation">[</span>远程库<span class="token punctuation">]</span> <span class="token punctuation">[</span>远程分支<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+
+
+<p>提交可能会出现错误：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh: connect to <span class="token function">host</span> github.com port <span class="token number">22</span>: Connection timed out fatal: Could not <span class="token builtin class-name">read</span> from remote repository.<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>可以参考以下两个链接进行增加config文件：<a target="_blank" rel="noopener" href="https://gist.github.com/Tamal/1cc77f88ef3e900aeae65f0e5e504794">链接1</a> <a target="_blank" rel="noopener" href="https://blog.csdn.net/MBuger/article/details/70226712">链接2</a></p>
 <p>有时候会出现头指针分离，push不到远程去:</p>
 <p><img src="/2021/11/01/git-guide/image-20210513202300745.png"></p>
 <p>其实可以直接像下面这样提交，就不会使用上面的步骤(<strong>会丢失最新修改</strong>):</p>
@@ -526,11 +541,12 @@ setttings-<span class="token operator">&gt;</span>SSHandGPGkeys-<span class="tok
 <span class="token function">git</span> pull <span class="token punctuation">[</span>远程库<span class="token punctuation">]</span> <span class="token punctuation">[</span>远程分支<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>本地pull不了是使用git checkout -f [当前分支]</p>
-<p>本地push不了可能是因为网页端修改过内容了，此时只能</p>
-<ul>
-<li>先pull再push</li>
-<li>或者强行上传:git push -u origin +mqtt</li>
-</ul>
+<p>本地push不了可能是因为网页端修改过内容了，需要拉去远端数据到本地然后merge之后再push同步：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> fetch origin //获取远程更新
+<span class="token function">git</span> merge origin/master //把更新的内容合并到本地分支<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_19674263/article/details/105277244">有关git的一些常用命令</a></p>
 <h3 id="5-同一台电脑多个密钥绑定多个guthub仓库"><a href="#5-同一台电脑多个密钥绑定多个guthub仓库" class="headerlink" title="5.同一台电脑多个密钥绑定多个guthub仓库:"></a>5.同一台电脑多个密钥绑定多个guthub仓库:</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42500714/article/details/101552802">主</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhengyan/p/10728527.html">次</a></p>
@@ -1814,7 +1830,7 @@ ls -lF<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="black-color">5.1k</span>
+                        class="black-color">5.8k</span>
             
             
             

@@ -4,8 +4,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="就立刻三个人分类, 向阳风">
-    <meta name="description" content="就立刻三个人分类 | 向阳风">
+    <meta name="keywords" content="leetcode-OneQuestionPerDay, 向阳风">
+    <meta name="description" content="一、每日一题1.11-15 灯泡开关
+方法一:暴力
+int bulbSwitch(int n){
+    if (n == 0) {
+        return 0;
+    }
+    bool arr[n];
+    memset(a">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +24,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>就立刻三个人分类 | 向阳风</title>
+    <title>leetcode-OneQuestionPerDay | 向阳风</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -262,12 +269,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">就立刻三个人分类</h1>
+                    <h1 class="description center-align post-title">leetcode-OneQuestionPerDay</h1>
                 </div>
             </div>
         </div>
@@ -381,9 +388,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/leetcode/">
+                                <span class="chip bg-color">leetcode</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -395,28 +406,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-11-01
+                    2021-11-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-01
+                    2021-11-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    453
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -439,7 +450,121 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="一、每日一题"><a href="#一、每日一题" class="headerlink" title="一、每日一题"></a>一、每日一题</h1><h4 id="1-11-15-灯泡开关"><a href="#1-11-15-灯泡开关" class="headerlink" title="1.11-15 灯泡开关"></a>1.11-15 灯泡开关</h4><p><img src="/2021/11/15/leetcode-onequestionperday/image-20211115164103807.png"></p>
+<p><strong>方法一:暴力</strong></p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">bulbSwitch</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    bool arr<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token function">memset</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> true<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">%</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">!</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            res<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>复杂度分析</strong></p>
+<ul>
+<li>时间复杂度：O($n^2$)。</li>
+<li>空间复杂度：O(1)。</li>
+</ul>
+<p><strong>方法二：数学法</strong></p>
+<p><img src="/2021/11/15/leetcode-onequestionperday/image-20211116093932953.png"></p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">bulbSwitch</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token function">sqrt</span><span class="token punctuation">(</span>n<span class="token operator">+</span><span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>复杂度分析</strong></p>
+<ul>
+<li>时间复杂度：O(1)。</li>
+<li>空间复杂度：O(1)。</li>
+</ul>
+<h4 id="2-11-16-完美矩形"><a href="#2-11-16-完美矩形" class="headerlink" title="2.11-16 完美矩形"></a>2.11-16 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/perfect-rectangle/">完美矩形</a></h4><p><img src="/2021/11/15/leetcode-onequestionperday/image-20211116163547640.png"></p>
+<p><img src="/2021/11/15/leetcode-onequestionperday/image-20211116163636479.png"></p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">//存储坐标点(x,y)
+typedef pair&lt;int, int&gt; Point;
+
+class Solution {
+public:
+    bool isRectangleCover(vector&lt;vector&lt;int&gt;&gt;&amp; rectangles) {
+        //记录各点的出现次数
+        map&lt;Point, int&gt; cnt;
+        int minX = rectangles[0][0], minY = rectangles[0][1], maxX = rectangles[0][2], maxY = rectangles[0][3];
+        long area = 0;
+
+        //遍历每个数组：累加小矩阵面积，获得四个角点坐标，记录小矩阵角点次数
+        for (auto &amp; rect : rectangles) {
+            int x = rect[0], y = rect[1], a = rect[2], b = rect[3];
+            area += (long) (a - x) * (b - y);
+
+            minX = min(x, minX);
+            minY = min(y, minY);
+            maxX = max(a, maxX);
+            maxY = max(b, maxY);
+
+            Point point1({x, y});
+            Point point2({x, b});
+            Point point3({a, y});
+            Point point4({a, b});
+
+            cnt[point1] += 1;
+            cnt[point2] += 1;
+            cnt[point3] += 1;
+            cnt[point4] += 1;
+        }
+
+        //大矩阵的四个顶点
+        Point pointMinMin({minX, minY});
+        Point pointMinMax({minX, maxY});
+        Point pointMaxMin({maxX, minY});
+        Point pointMaxMax({maxX, maxY});
+
+        //条件1：各矩阵面积等于大矩阵面积
+        if (area != (maxX - minX) * (maxY - minY)) {
+            return false;
+        }
+        //条件2：(1)大矩阵四个顶点出现1次
+        if (cnt[pointMinMin] != 1 || cnt[pointMinMax] != 1 || cnt[pointMaxMin] != 1 || cnt[pointMaxMax] != 1) {
+            return false;
+        }
+
+        //条件2：(2)所有角点(除了大矩阵的四个顶点)，出现2或者4次
+        cnt.erase(pointMinMin);
+        cnt.erase(pointMinMax);
+        cnt.erase(pointMaxMin);
+        cnt.erase(pointMaxMax);
+
+        for (auto &amp; entry : cnt) {
+            int value = entry.second;
+            if (value != 2 &amp;&amp; value != 4) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>复杂度分析</strong></p>
+<ul>
+<li>时间复杂度：O(n)。</li>
+<li>空间复杂度：O(n)。</li>
+</ul>
+<h1 id="二、周赛"><a href="#二、周赛" class="headerlink" title="二、周赛"></a>二、周赛</h1>
                 
             </div>
             <hr/>
@@ -465,7 +590,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wind88888.github.io/2021/11/01/jiu-li-ke-san-ge-ren-fen-lei/">https://wind88888.github.io/2021/11/01/jiu-li-ke-san-ge-ren-fen-lei/</a>
+                    <a href="https://wind88888.github.io/2021/11/15/leetcode-onequestionperday/">https://wind88888.github.io/2021/11/15/leetcode-onequestionperday/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -502,7 +627,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/leetcode/">
+                                    <span class="chip bg-color">leetcode</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -938,9 +1067,56 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/11/15/leetcode-onequestionperday/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="leetcode-OneQuestionPerDay">
+                        
+                        <span class="card-title">leetcode-OneQuestionPerDay</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John 向阳风
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/11/15/ubuntu-vpn/">
                     <div class="card-image">
@@ -958,9 +1134,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -974,51 +1150,6 @@
                     
                     <a href="/tags/ubuntu/">
                         <span class="chip bg-color">ubuntu</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/11/01/git-guide/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Git-Guide">
-                        
-                        <span class="card-title">Git-Guide</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-01
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            John 向阳风
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/GIT/">
-                        <span class="chip bg-color">GIT</span>
                     </a>
                     
                 </div>
