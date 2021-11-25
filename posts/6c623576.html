@@ -40,9 +40,9 @@ int bulbSwitch(int n){
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="向阳风" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="向阳风" type="application/atom+xml">
 </head>
 
 
@@ -415,21 +415,21 @@ int bulbSwitch(int n){
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-11-24
+                    2021-11-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3k
+                    3.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    15 分
+                    16 分
                 </div>
                 
 
@@ -875,7 +875,7 @@ public:
     }
 };<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="第二周：11-22-gt-11-28"><a href="#第二周：11-22-gt-11-28" class="headerlink" title="第二周：11.22 -> 11.28"></a>第二周：11.22 -&gt; 11.28</h2><h3 id="1-打乱数组"><a href="#1-打乱数组" class="headerlink" title="1.打乱数组"></a>1.打乱数组</h3><p><img src="/2021/11/15/leetcode-onequestionperday/image-20211122132510970.png"></p>
+<h2 id="第二周：11-22-gt-11-28"><a href="#第二周：11-22-gt-11-28" class="headerlink" title="第二周：11.22 -> 11.28"></a>第二周：11.22 -&gt; 11.28</h2><h3 id="1-打乱数组"><a href="#1-打乱数组" class="headerlink" title="1.打乱数组"></a>1.打乱数组</h3><p><img src="/posts/6c623576/image-20211122132510970.png"></p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution {
 public:
     Solution(vector&lt;int&gt;&amp; nums) {
@@ -963,7 +963,7 @@ public:
 
 
 
-<h3 id="3-从英文中重建数字"><a href="#3-从英文中重建数字" class="headerlink" title="3.从英文中重建数字"></a>3.从英文中重建数字</h3><p><img src="/2021/11/15/leetcode-onequestionperday/image-20211124104727532.png"></p>
+<h3 id="3-从英文中重建数字"><a href="#3-从英文中重建数字" class="headerlink" title="3.从英文中重建数字"></a>3.从英文中重建数字</h3><p><img src="/posts/6c623576/image-20211124104727532.png"></p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution {
 public:
     string originalDigits(string s) {
@@ -996,6 +996,43 @@ public:
         return ans;
     }
 };<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="4-可怜的小猪"><a href="#4-可怜的小猪" class="headerlink" title="4.可怜的小猪"></a>4.可怜的小猪</h3><p><img src="/posts/6c623576/image-20211125100148364.png"></p>
+<p>放弃。。。。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">class Solution {
+public:
+    int poorPigs(int buckets, int minutesToDie, int minutesToTest) {
+        if (buckets == 1) {
+            return 0;
+        }
+        vector&lt;vector&lt;int&gt;&gt; combinations(buckets + 1,vector&lt;int&gt;(buckets + 1));
+        combinations[0][0] = 1;
+        int iterations = minutesToTest / minutesToDie;
+        vector&lt;vector&lt;int&gt;&gt; f(buckets,vector&lt;int&gt;(iterations + 1));
+        for (int i = 0; i &lt; buckets; i++) {
+            f[i][0] = 1;
+        }
+        for (int j = 0; j &lt;= iterations; j++) {
+            f[0][j] = 1;
+        }
+        for (int i = 1; i &lt; buckets; i++) {
+            combinations[i][0] = 1;
+            combinations[i][i] = 1;
+            for (int j = 1; j &lt; i; j++) {
+                combinations[i][j] = combinations[i - 1][j - 1] + combinations[i - 1][j];
+            }
+            for (int j = 1; j &lt;= iterations; j++) {
+                for (int k = 0; k &lt;= i; k++) {
+                    f[i][j] += f[k][j - 1] * combinations[i][i - k];
+                }
+            }
+            if (f[i][iterations] &gt;= buckets) {
+                return i;
+            }
+        }
+        return 0;
+    }
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -1208,7 +1245,7 @@ public:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wind88888.github.io/2021/11/15/leetcode-onequestionperday/">https://wind88888.github.io/2021/11/15/leetcode-onequestionperday/</a>
+                    <a href="https://wind88888.github.io/posts/6c623576.html">https://wind88888.github.io/posts/6c623576.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1690,7 +1727,7 @@ public:
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2021/11/15/leetcode-onequestionperday/">
+                <a href="/posts/6c623576.html">
                     <div class="card-image">
                         
                         
@@ -1736,7 +1773,7 @@ public:
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/11/15/ubuntu-vpn/">
+                <a href="/posts/98d65104.html">
                     <div class="card-image">
                         
                         
@@ -2009,7 +2046,7 @@ public:
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="black-color">8.3k</span>
+                        class="black-color">8.4k</span>
             
             
             
@@ -2360,7 +2397,7 @@ $(function () {
             var OriginTitile = document.title,
 	  st;
             document.addEventListener("visibilitychange", function() {
-                     document.hidden ? (document.title = "写离开页面标题显示的内容", clearTimeout(st)) : (document.title = "写进入页面标题显示的内容", st = setTimeout(function() {
+                     document.hidden ? (document.title = "你看不见我了(●'◡'●)", clearTimeout(st)) : (document.title = "鸭，被你发现了o(*￣▽￣*)ブ", st = setTimeout(function() {
                                         document.title = OriginTitile
                            }, 3e3))
             }) 
